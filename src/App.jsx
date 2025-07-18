@@ -1,9 +1,10 @@
 import ImageGrid from "./components/ImageGrid";
 import Hero from "./components/Hero";
+import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Hero />
       <ImageGrid />
     </div>

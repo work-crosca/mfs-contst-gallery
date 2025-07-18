@@ -65,7 +65,7 @@ const ImageGrid = () => {
 
   return (
     <>
-      <div className="masonry">
+      <div className="masonry" id="gallery">
         {visibleImages.map((img) => (
           <LazyImageCard
             key={img.key}
