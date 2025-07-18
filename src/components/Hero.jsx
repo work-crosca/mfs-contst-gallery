@@ -1,11 +1,25 @@
 import "../styles/Hero.css";
+import { IoIosArrowRoundDown } from "react-icons/io";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero-section">
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        src="/hero-bg.mp4"
+      />
+      <div className="hero-overlay" />
       <div className="hero-content">
-        <h1>Galerie imagini MinIO</h1>
-        <p>Explorează toate imaginile încărcate în bucket-ul tău – afișate în stil Pinterest.</p>
+        <h1 className="hero-title">Explorează Galeria Vizual</h1>
+        <p className="hero-subtitle">Imagini dinamice din bucket-ul tău MinIO</p>
+        <div className="hero-arrow">
+          <IoIosArrowRoundDown />
+        </div>
       </div>
     </section>
   );

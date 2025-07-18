@@ -1,9 +1,9 @@
-import { FaSpinner } from "react-icons/fa";
+import { ImSpinner } from "react-icons/im";
 
 const LoadingIndicator = () => {
   return (
     <div style={{ textAlign: "center", padding: "1rem" }}>
-      <FaSpinner
+      <ImSpinner
         style={{
           fontSize: "2rem",
           color: "#990ae3",
