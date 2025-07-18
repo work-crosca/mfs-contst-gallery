@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { XMLParser } from "fast-xml-parser";
+import { useInView } from "react-intersection-observer";
 import LoadingIndicator from "./LoadingIndicator";
 import "../styles/ImageGrid.css";
 
@@ -65,17 +66,24 @@ const ImageGrid = () => {
   return (
     <>
       <div className="masonry">
-        {visibleImages.map((img) => (
-          <div key={img.key} className="masonry-card">
-            <img
-              src={`${baseUrl}/${img.key}`}
-              alt={img.key}
-              className="masonry-img"
-            />
-            <p className="img-title">{img.key}</p>
-            <small className="img-date">{img.lastModified}</small>
-          </div>
-        ))}
+        {visibleImages.map((img) => {
+          const { ref, inView } = useInView({ triggerOnce: true });
+
+          return (
+            <div key={img.key} className="masonry-card" ref={ref}>
+              {inView && (
+                <img
+                  src={`${baseUrl}/${img.key}`}
+                  alt={img.key}
+                  className="masonry-img"
+                  loading="lazy"
+                />
+              )}
+              <p className="img-title">{img.key}</p>
+              <small className="img-date">{img.lastModified}</small>
+            </div>
+          );
+        })}
       </div>
 
       {isLoading && <LoadingIndicator />}
