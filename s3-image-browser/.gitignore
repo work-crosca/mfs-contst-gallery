@@ -1,0 +1,44 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+.temp/
+.tempfiles/
+
+# Vite
+.vite/
+.cache/
+vite.svg
+
+# Build
+build/
+*.log
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+.swap
+
+# Env
+.env
+.env.*.local
+.env.local
+
+# VSCode
+.vscode/
+.history/
+
+# Optional: IDEs
+.idea/
+*.iml
+
+# Test coverage
+coverage/
+
+# Optional: OS-specific
+Thumbs.db
