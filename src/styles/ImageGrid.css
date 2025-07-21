@@ -29,17 +29,17 @@
    transition: transform 0.2s ease;
  }
  
- 
- .masonry-card:hover {
-   transform: translateY(-4px);
- }
- 
  .masonry-img {
    width: 100%;
    display: block;
    object-fit: cover;
+   transition: all 0.3s ease;
  }
- 
+
+ .masonry-card:hover .masonry-img{
+  transform: scale(1.05);
+ }
+
  .img-title {
    font-weight: bold;
    font-size: 0.9rem;
@@ -53,3 +53,29 @@
    color: #666;
    margin: 0.25rem 0.75rem 0.75rem;
  }
+
+ .open-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: white;
+  aspect-ratio: 1/1!important;
+  background: linear-gradient(rgba(256, 256, 256, 0.1), rgba(256, 256, 256, 0.2));
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 100%;
+  font-size: 18px;
+  backdrop-filter: blur(2px);
+  transition: all 0.2s ease;
+}
+
+.open-icon:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}

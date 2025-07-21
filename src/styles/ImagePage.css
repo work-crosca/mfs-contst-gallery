@@ -1,0 +1,48 @@
+.image-page {
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+ 
+ .image-card {
+   border-radius: 2rem;
+   width: 100%;
+   max-width: 1200px;
+   padding: 1rem;
+   background-color: #111;
+   text-align: center;
+   box-sizing: border-box;
+   overflow: hidden;
+   margin: 0 auto;
+ }
+ 
+ .image-full {
+   width: 100%;
+   border-radius: 12px;
+   object-fit: contain;
+ }
+ 
+ .image-name {
+   margin-top: 1rem;
+   color: #666;
+   font-size: 0.9rem;
+   word-break: break-all;
+ }
+ 
+ .back-button {
+   display: inline-block;
+   margin-top: 1.5rem;
+   padding: 0.5rem 1rem;
+   background-color: #efefef;
+   color: #333;
+   cursor: pointer;
+   text-decoration: none;
+   border-radius: 6px;
+   font-size: 0.85rem;
+   transition: all 0.2s ease;
+ }
+ 
+ .back-button:hover {
+   background-color: #ddd;
+ }
